@@ -9,7 +9,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset =Product.objects.all()
     serializer_class = ProductSerializers
     filter_backends = [filters.OrderingFilter]
-    ordering_fields = ['id','name']
+    ordering_fields = ['id', 'name']
 class ProductdetailViewSet(generics.UpdateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializers
